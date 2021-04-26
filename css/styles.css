@@ -1,0 +1,31 @@
+body {
+    background-image: url("images/pizza2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#top {
+    text-align:justify;
+    color: #3d807c;
+}
+h1 {
+    font-family:'Times New Roman', Times, serif;
+}
+p {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Kalam';
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+h5 {
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Merienda', cursive;
+}
+p ,h5 {
+    font-weight:bolder;
+    color: black;
+}
+#btn {
+    text-align: center;
+    font-family:fantasy, cursive;
+    font-family:monospace, cursive
+}
