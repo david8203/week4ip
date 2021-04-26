@@ -81,3 +81,44 @@ $(document).ready(function(){
             default:
                 break;
         }
+
+        totalPrice = price*pQuantity; 
+
+        $("#placecrust").text(pCrust);
+        $("#placesize").text(pSize);
+        $("#placetoping").text(pTop);
+        $("#placequantity").text("x"+pQuantity);
+        $("#placetype").text(pType);
+        // $("#placeprice").text(totalPrice);
+    });
+
+    //user logic for delivery contact
+    // $("#contactD").hide();
+
+    $("#contactD").submit(function(e){
+        e.preventDefault();
+    
+
+
+        var firstname = $("#fName").val();
+        var lastname = $("#lName").val();
+        var phonenumber = $("#pNumber").val();
+        var email = $("#emailA").val();
+        var  address = $("#tAddress").val();
+
+        var customerContact = new Dcontact (firstname,lastname,phonenumber,email,address);
+        deliveryContact.addcontact(customerContact);
+        var fName = customerDisplay[0].firstName;
+        var lName = customerDisplay[0].lastName;
+        var pNumber = customerDisplay[0].phoneNumber;
+        var eAddress = customerDisplay[0].emailAddress;
+        var cAddress = customerDisplay[0].address;
+        
+        if (fName == "" || pNumber == "" || cAddress == ""){
+            alert("Complete filling the form ")
+        }else {
+            alert("Thank you "+fName+" "+lName+" for your subscription."+eAddress+" will receive an email of our newsletter");
+        }
+    });
+    var locate;
+    var phonenumber;
