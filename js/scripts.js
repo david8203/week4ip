@@ -60,3 +60,24 @@ $(document).ready(function(){
         var pCrust = pizzaDisplay[0].crust;
         var pSize = pizzaDisplay[0].size;
         var pQuantity = pizzaDisplay[0].quantity;
+        
+         // var totalPrice;
+         switch (pTop) {
+            case "mushroom":
+                price = pizzaPrice.deluxeMega + pizzaPrice.mushrooms ;
+                break;
+            case "blackolives":
+                price = pizzaPrice.deluxeMega + pizzaPrice.blackolives ;
+                break;
+            case "onions":
+                price = pizzaPrice.deluxeMega + pizzaPrice.onions ;
+                break;
+            case "cheese":
+                price = pizzaPrice.deluxeMega + pizzaPrice.cheese ;
+                break;
+            case "pepper":
+                price = pizzaPrice.deluxeMega + pizzaPrice.red_green_pepper ;
+                break;
+            default:
+                break;
+        }
