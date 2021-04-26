@@ -136,7 +136,7 @@ $(document).ready(function(){
         locate =  prompt("give a location: ");
         phonenumber =  prompt("Enter your Phone Number: ");
        alert ("your order will be delivered to "+locate);
-       $("#placeprice").text(totalPrice + 300);
+       $("#placeprice").text(totalPrice + 500);
     });
     $(".btn2").click(function(e){
         e.preventDefault();
