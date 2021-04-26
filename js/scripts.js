@@ -40,3 +40,23 @@ var pizzaPrice = {
     deluxeMega : 1300,
     deluxeLarge : 1000, deluxeRegular : 800, classicMega : 1150, classicLarge : 900, classicRegular : 650, mushrooms : 150, blackolives : 200, cheese : 100, onions : 80, red_green_pepper : 50,
 }
+// user logic
+$(document).ready(function(){
+    var price;
+    var totalPrice;
+    $("#makeOrder").submit(function(e){
+        e.preventDefault();
+        var toppings = $('input[type="checkbox"]:checked').val();
+        var pizzacrust = $("#pizzacrust").val();
+        var size = $("#pizzasize").val();
+        var quantity = $("#quantity").val();
+        var type = $("#pizzatype").val();
+    
+        var customerOrder = new Order (type,toppings,pizzacrust,size,quantity);
+        pizzaorder.addorder(customerOrder);
+
+        var pType = pizzaDisplay[0].type;
+        var pTop = pizzaDisplay[0].topping;
+        var pCrust = pizzaDisplay[0].crust;
+        var pSize = pizzaDisplay[0].size;
+        var pQuantity = pizzaDisplay[0].quantity;
