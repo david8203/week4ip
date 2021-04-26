@@ -122,3 +122,30 @@ $(document).ready(function(){
     });
     var locate;
     var phonenumber;
+
+    $("#comment").submit(function(e){
+        e.preventDefault();
+        var comment = $("#message").val();
+    
+
+        $("#placeComment").text(comment)
+    });
+    $(".btn1").click(function(e){
+        e.preventDefault();
+        alert("The deliverly cost will be 500Ksh.kindly enter in your details on the form below")
+        locate =  prompt("give a location: ");
+        phonenumber =  prompt("Enter your Phone Number: ");
+       alert ("your order will be delivered to "+locate);
+       $("#placeprice").text(totalPrice + 300);
+    });
+    $(".btn2").click(function(e){
+        e.preventDefault();
+        $("#placeprice").text(totalPrice + 0);
+        alert("Thankyou for choosing us,welcome again");
+    });
+
+    $("#contactD").hide();
+    $("#subscribe").click(function(){
+        $("#contactD").show();
+    })
+});
